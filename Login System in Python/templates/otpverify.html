@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <style>
+    .login-page {
+      width: 360px;
+      padding: 5% 0 0;
+      margin: auto;
+    }
+
+    .login-form {
+      margin-top: 60px;
+      height: 270px;
+    }
+
+    .form {
+      position: relative;
+      z-index: 1;
+      background: #FFFFFF;
+      max-width: 500px;
+      height: 500px;
+      margin: 0 auto 0px;
+      padding: 45px;
+      text-align: center;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+
+    .form input {
+      font-family: "Arial", sans-serif;
+      outline: 0;
+      background: #f2f2f2;
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .form button {
+      font-family: "Arial", sans-serif;
+      outline: 0;
+      background: rgb(38, 147, 219);
+      width: 100%;
+      border: 0;
+      padding: 15px;
+      color: #FFFFFF;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .form button:hover,
+    .form button:active,
+    .form button:focus {
+      background: rgb(4, 103, 170);
+    }
+
+    .form .signUp {
+      margin: 15px 0 0;
+      color: #b3b3b3;
+      font-size: 12px;
+      margin-top: 80px;
+    }
+
+    .form .signUp a {
+      color: rgb(38, 147, 219);
+      text-decoration: none;
+    }
+
+    .form .forgotPwd a {
+      color: #53a7d8;
+      text-decoration: none;
+      margin-left: 170px;
+    }
+
+    .form .forgotPwd {
+      margin: 0px 0px 10px;
+      font-size: 12px;
+    }
+
+    .titleLogin {
+      margin: 0px 0px;
+      font-size: 32px;
+    }
+
+    body {
+      background: skyblue;
+      /* fallback for old browsers */
+      background: linear-gradient(to left, #ffa5d9, #80c5de);
+      font-family: "Arial", sans-serif;
+      margin: 0px 0px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-page">
+    <div class="form">
+      <p class="titleLogin">Forgot Password</p>
+      <form class="login-form" action="http://127.0.0.1:5000/send_otp" method="post">
+
+        <input type="text" placeholder="Username" name="txtuname" required="Username is Required" />
+
+        <input type="submit" style="margin-top: 40px;" name="b1" value="Send OTP">
+
+      </form>
+      <form class="login-form" action="http://127.0.0.1:5000/verify" method="post">
+
+        <input type="text" placeholder="OTP" name="txtotp" required="OTP is Required" />
+
+        <input type="submit" name="b2" value="Verify">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
