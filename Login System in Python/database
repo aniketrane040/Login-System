@@ -1,0 +1,15 @@
+we are using my-sql database
+
+create database College
+
+In database college create table students as follows:
+
+create table students
+(
+  name varchar(50),
+  profile_pic_name varchar(50),
+  roll_no int(50),
+  mail varchar(50),
+  username varchar(50) primary key,
+  password varchar(50)
+)
